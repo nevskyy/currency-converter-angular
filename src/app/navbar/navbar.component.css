@@ -1,0 +1,21 @@
+header {
+  background-color: #2196f3;
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a, span {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+a:hover {
+  background-color: #2076c7;
+}

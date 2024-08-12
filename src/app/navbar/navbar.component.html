@@ -1,0 +1,14 @@
+<header>
+  <nav class="container">
+    <div class="links">
+      <a routerLink="/">Currency Converter</a>
+      <a routerLink="/about">About</a>
+    </div>
+    <div class="rates">
+      <ng-container *ngIf="rates">
+        <span>1 UAH = {{ (1 / rates["USD"]).toFixed(2) }} USD</span>
+        <span>1 UAH = {{ (1 / rates["EUR"]).toFixed(2) }} EUR</span>
+      </ng-container>
+    </div>
+  </nav>
+</header>
