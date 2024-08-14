@@ -19,3 +19,13 @@ a, span {
 a:hover {
   background-color: #2076c7;
 }
+
+@media (max-width: 600px) {
+
+  .container {
+    flex-direction: column;
+  }
+  .links {
+    margin-bottom: 20px;
+  }
+}

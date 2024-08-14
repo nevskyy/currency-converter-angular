@@ -18,14 +18,15 @@ import { NgIf } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   rates!: { [key: string]: number };
 
-  constructor(private ratesService: RatesService) {}
+  constructor(private ratesService: RatesService) {
+  }
 
   ngOnInit(): void {
     this.ratesService.rates$.subscribe((rates) => {
-      this.rates = rates;
+      if (rates && Object.keys(rates).length > 0) this.rates = rates;
     });
   }
 }
